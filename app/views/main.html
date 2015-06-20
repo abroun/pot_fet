@@ -8,11 +8,13 @@
 <div ng-controller="MainCtrl">
   <div class="row" ng-repeat="item in items">
     <div class="col-xs-3">
-      <img src="{{item.media.m}}" alt="{{item.title}}" class="img-responsive">
+      <a href="#/{{$index}}">
+        <img src="{{item.media.m}}" alt="{{item.title}}" class="img-responsive">
+      </a>
     </div>
     <div class="col-xs-9">
       
-      {{item.title}}
+      <a href="#/{{$index}}">{{item.title}}</a>
       <a href="https://www.flickr.com/people/{{item.author_id}}">Post author</a>
       Published {{item.date_taken}}
       <a href="{{item.link}}">View on Flickr</a>

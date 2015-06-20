@@ -1,0 +1,13 @@
+<div ng-controller="PostCtrl">
+  <div class="row">
+    <div class="col-xs-3">
+      <img src="{{item.media.m}}" alt="{{item.title}}" class="img-responsive">
+    </div>
+    <div class="col-xs-9">
+      {{item.title}}
+      <a href="https://www.flickr.com/people/{{item.author_id}}">Post author</a>
+      Published {{item.date_taken}}
+      <a href="{{item.link}}">View on Flickr</a>
+    </div>
+  </div>
+</div>
