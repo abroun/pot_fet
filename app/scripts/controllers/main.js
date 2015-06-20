@@ -8,10 +8,9 @@
  * Controller of the potFetApp
  */
 angular.module('potFetApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $http) {
+    $http.get('tmp_data.json').success(function(data) {
+      $scope.items = data.items;
+    });
+    
   });
