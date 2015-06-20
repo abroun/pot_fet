@@ -18,7 +18,7 @@
         <h3 class="mv-item-title"><a href="#/{{$index}}">{{item.title}}</a></h3>
       </div>
       <a class="mv-item-author-link" href="https://www.flickr.com/people/{{item.author_id}}">Post author</a>
-      <span class="mv-item-published">Published: {{item.date_taken}}</span>
+      <span class="mv-item-published">Published: {{formatPublishedDate(item.date_taken)}}</span>
       <a class="mv-item-flickr-link" href="{{item.link}}">View on Flickr</a>
     </div>
   </div>
