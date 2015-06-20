@@ -1,0 +1,14 @@
+* Find or create a routine to format the date
+* Style the main page
+* Look at freezing title at top of main page whilst scrolling the list of images
+* Style the post detail page
+* Switch from using the array index for posts to an (author, image id) pair
+
+* Setup a proxy to resolve the CORS issue
+
+* Detect if a post index is invalid and if so display a page not found result
+
+Nice to have
+------------
+
+* Look at implementing inifinte scrolling (perhaps need to get a longer list of data...)
