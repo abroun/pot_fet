@@ -1,7 +1,7 @@
 * Find or create a routine to format the date
 * Style the main page
 * Look at freezing title at top of main page whilst scrolling the list of images
-* Style the post detail page
+* Style the post detail page - Done
 * Switch from using the array index for posts to an (author, image id) pair
 
 * Setup a proxy to resolve the CORS issue
