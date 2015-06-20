@@ -89,3 +89,77 @@ body {
     border-bottom: 0;
   }
 }
+
+/* Main view styling */
+.mv-row {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb( 128, 128, 128 );
+}
+
+.mv-image-col {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.mv-item-image {
+    width: 100%;
+    height: auto;
+}
+
+.mv-item-title {    
+  width: 500px;
+  height: 1.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mv-item-author-link {
+  display: inline;
+  text-decoration: underline;
+}
+
+.mv-item-published {
+  display: inline;
+}
+
+.mv-item-flickr-link {
+    display: inline;
+    text-decoration: underline;
+}
+
+/* Post view styling */
+.pv-image-col {
+    padding-right: 0px;
+}
+
+.pv-item-image {
+    width: 100%;
+    height: auto;
+}
+
+.pv-item-title {    
+  width: 500px;
+  height: 1.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  text-decoration: underline;
+}
+
+.pv-author-row {
+  margin-bottom: 10px;
+}
+
+.pv-back-button {
+  margin-top: 20px;
+}
+
+.pv-item-author-link {
+  text-decoration: underline;
+}
+
+.pv-item-published {
+}

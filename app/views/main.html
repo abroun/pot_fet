@@ -1,23 +1,25 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <h3>Flickr Public Feed</h3>
+    <h2>Flickr Public Feed</h3>
   </div>
 </div>
 
 <div ng-controller="MainCtrl">
-  <div class="row" ng-repeat="item in items">
-    <div class="col-xs-3">
+  <div class="row mv-row" ng-repeat="item in items">
+    <div class="col-xs-4 mv-image-col">
       <a href="#/{{$index}}">
-        <img src="{{item.media.m}}" alt="{{item.title}}" class="img-responsive">
+        <img class="mv-item-image" src="{{item.media.m}}" alt="{{item.title}}">
       </a>
     </div>
-    <div class="col-xs-9">
+    <div class="col-xs-8">
       
-      <a href="#/{{$index}}">{{item.title}}</a>
-      <a href="https://www.flickr.com/people/{{item.author_id}}">Post author</a>
-      Published {{item.date_taken}}
-      <a href="{{item.link}}">View on Flickr</a>
+      <div>
+        <h3 class="mv-item-title"><a href="#/{{$index}}">{{item.title}}</a></h3>
+      </div>
+      <a class="mv-item-author-link" href="https://www.flickr.com/people/{{item.author_id}}">Post author</a>
+      <span class="mv-item-published">Published: {{item.date_taken}}</span>
+      <a class="mv-item-flickr-link" href="{{item.link}}">View on Flickr</a>
     </div>
   </div>
 </div>

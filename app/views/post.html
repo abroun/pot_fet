@@ -1,13 +1,45 @@
 <div ng-controller="PostCtrl">
   <div class="row">
-    <div class="col-xs-3">
-      <img src="{{item.media.m}}" alt="{{item.title}}" class="img-responsive">
+    <div class="col-xs-10">
+      <h3><a class="pv-item-title" href="{{item.link}}">{{item.title}}</a></h3>
     </div>
-    <div class="col-xs-9">
-      {{item.title}}
-      <a href="https://www.flickr.com/people/{{item.author_id}}">Post author</a>
-      Published {{item.date_taken}}
-      <a href="{{item.link}}">View on Flickr</a>
+    <div class="col-xs-2">
+      <a class="btn btn-primary pv-back-button" href="#/">Back</a>
+    </div>
+  </div>
+  <div class="row pv-author-row">
+    <div class="col-xs-12">
+      <a class="pv-item-author-link" href="https://www.flickr.com/people/{{item.author_id}}">Post author</a>
+      | 
+      <span class="pv-item-published">Published: {{item.date_taken}}</span> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 pv-image-col">
+      <img class="pv-item-image" src="{{item.media.m}}" alt="{{item.title}}" class="img-responsive">
+    </div>
+    <div class="col-xs-8">
+       <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non 
+         mollis dui. Curabitur condimentum fermentum enim, eu placerat libero 
+         lobortis eu. Duis nec condimentum nisi. Morbi aliquam tortor ipsum, 
+         ac sollicitudin lacus accumsan at. Aenean eleifend convallis efficitur. 
+         Aliquam sodales odio id lectus suscipit elementum. Nam convallis ex 
+         vitae ex porttitor, vitae fermentum velit tristique. Suspendisse magna 
+         nisl, accumsan eget pharetra quis, suscipit non neque.
+       </p>
+       <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non 
+         mollis dui. Curabitur condimentum fermentum enim, eu placerat libero 
+         lobortis eu. Duis nec condimentum nisi. Morbi aliquam tortor ipsum, 
+         ac sollicitudin lacus accumsan at. Aenean eleifend convallis efficitur. 
+         Aliquam sodales odio id lectus suscipit elementum. Nam convallis ex 
+         vitae ex porttitor, vitae fermentum velit tristique. Suspendisse magna 
+         nisl, accumsan eget pharetra quis, suscipit non neque.
+       </p>
+       <p>
+         Tags: {{item.tags}}
+       </p>
     </div>
   </div>
 </div>

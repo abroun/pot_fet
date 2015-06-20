@@ -8,7 +8,11 @@
 
 * Detect if a post index is invalid and if so display a page not found result
 
+* Display tags as links
+
 Nice to have
 ------------
 
+* Go back from detail to same position in list - look at 
+   http://stackoverflow.com/questions/14107531/retain-scroll-position-on-route-change-in-angularjs
 * Look at implementing inifinte scrolling (perhaps need to get a longer list of data...)
