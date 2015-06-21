@@ -1,7 +1,19 @@
 <?php 
 
 // Get data from Flickr
-$data = file_get_contents('https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&nojsoncallback=1');
+$params = array(
+  'tags'=>'potato',
+  'tagmode'=>'all',
+  'format'=>'json',
+  'nojsoncallback'=>1 );
+  
+if (isset($_GET['tags'])) {
+  $params['tags'] = $_GET['tags'];
+}
+
+$url = 'https://api.flickr.com/services/feeds/photos_public.gne?' . http_build_query($params);
+
+$data = file_get_contents($url);
 
 // For some reason Flickr escapes ' characters which is apparently invalid JSON. Replace
 // escaped ' characters so that JSON parsers don't break.

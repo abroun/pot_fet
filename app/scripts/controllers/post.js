@@ -13,8 +13,13 @@ angular.module('potFetApp')
     $scope.items = [];
     $scope.item = {};
     $scope.loaded = false;
-      
-    $http.get(FLICKR_PROXY_URL).success(function(data) {
+    
+    $scope.tags = 'potato';
+    if ($routeParams.tags != undefined) {
+      $scope.tags = $routeParams.tags;
+    }
+    
+    $http.get(FLICKR_PROXY_URL, { params: { tags: $scope.tags } }).success(function(data) {
       $scope.items = data.items;
       $scope.postId = $routeParams.postId;
       $scope.item = $scope.items[ $scope.postId ];
@@ -22,4 +27,12 @@ angular.module('potFetApp')
     });
       
     $scope.formatPublishedDate = helperMethods.formatPublishedDate;
+    
+    $scope.buildBackLink = function () {
+      return '#/?tags=' + encodeURIComponent($scope.tags);
+    };
+    
+    $scope.buildSearchLink = function (tag) {
+      return '#/?tags=' + encodeURIComponent(tag);
+    };
   });
