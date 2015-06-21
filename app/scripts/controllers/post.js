@@ -15,7 +15,7 @@ angular.module('potFetApp')
     $scope.loaded = false;
     
     $scope.tags = 'potato';
-    if ($routeParams.tags != undefined) {
+    if ($routeParams.tags !== undefined) {
       $scope.tags = $routeParams.tags;
     }
     

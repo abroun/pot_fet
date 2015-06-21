@@ -10,6 +10,9 @@
 
 * Display tags as links - Done
 
+* Implement tag search
+* Give images that don't have a title on Flickr a title of 'Unititled'
+
 Nice to have
 ------------
 

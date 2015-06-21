@@ -1,11 +1,23 @@
 
-<div class="row">
-  <div class="col-xs-12">
-    <h2>Flickr Public Feed</h3>
-  </div>
-</div>
+
 
 <div ng-controller="MainCtrl">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Flickr Public Feed</h3>
+    </div>
+    <div class="col-md-6">
+      <div class="input-group mv-search">
+        <input class="form-control" type="text" ng-keypress="onSearchKeyPress($event)" 
+          ng-model="searchTags" placeholder="Search tags...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" ng-click="searchForTag()">
+            <span class="glyphicon glyphicon-search" aria-label="Search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
   <div class="row mv-row" ng-repeat="item in items" ng-cloak>
     <div class="col-xs-4 mv-image-col">
       <a href="{{buildPostLink($index)}}">
