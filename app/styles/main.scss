@@ -90,6 +90,18 @@ body {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .mv-large-item-info {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .mv-small-item-info {
+    display: none;
+  }
+}
+
 /* Main view styling */
 .mv-row {
     border-top-style: solid;

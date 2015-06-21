@@ -14,12 +14,33 @@
     </div>
     <div class="col-xs-8">
       
-      <div>
-        <h3 class="mv-item-title"><a href="#/{{$index}}">{{item.title}}</a></h3>
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="mv-item-title"><a href="#/{{$index}}">{{item.title}}</a></h3>
+        </div>
       </div>
-      <a class="mv-item-author-link" href="https://www.flickr.com/people/{{item.author_id}}">Post author</a>
-      <span class="mv-item-published">Published: {{formatPublishedDate(item.date_taken)}}</span>
-      <a class="mv-item-flickr-link" href="{{item.link}}">View on Flickr</a>
+      <div class="mv-small-item-info">
+        <div class="row">
+          <div class="col-xs-12">
+            <span class="mv-item-published">Published: {{formatPublishedDate(item.date_taken)}}</span>
+          </div>
+        </div> 
+        <div class="row">
+          <div class="col-xs-12">
+            <a class="mv-item-author-link" href="https://www.flickr.com/people/{{item.author_id}}">Post author</a>
+            <a class="mv-item-flickr-link" href="{{item.link}}">View on Flickr</a>
+          </div>
+        </div>
+      </div>
+      <div class="mv-large-item-info">
+        <div class="row">
+          <div class="col-xs-12">
+            <a class="mv-item-author-link" href="https://www.flickr.com/people/{{item.author_id}}">Post author</a>
+            <span class="mv-item-published">Published: {{formatPublishedDate(item.date_taken)}}</span>
+            <a class="mv-item-flickr-link" href="{{item.link}}">View on Flickr</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
