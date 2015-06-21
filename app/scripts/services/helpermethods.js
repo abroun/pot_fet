@@ -13,18 +13,18 @@ angular.module('potFetApp')
     // Service logic
     // ...
     var MONTHS = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec"
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec'
     ];
 
     // Public API here
@@ -40,11 +40,11 @@ angular.module('potFetApp')
         // Determine the suffix to use for the day
         var daySuffix = 'th';
         var dayIdx = date.getDate();
-        if (dayIdx%10 == 1 && dayIdx != 11) {
+        if (dayIdx%10 === 1 && dayIdx !== 11) {
             daySuffix = 'st';
-        } else if (dayIdx%10 == 2 && dayIdx != 12) {
+        } else if (dayIdx%10 === 2 && dayIdx !== 12) {
             daySuffix = 'nd';
-        } else if (dayIdx%10 == 3 && dayIdx != 13) {
+        } else if (dayIdx%10 === 3 && dayIdx !== 13) {
             daySuffix = 'rd';
         }
         
@@ -61,11 +61,9 @@ angular.module('potFetApp')
             minutes = '0' + minutes;    // Zero pad if needed
         }
         
-        var publishedDateString = dayIdx.toString() + daySuffix
-            + ' ' + month + ' ' + date.getFullYear().toString()
-            + ' at ' + hours + ':' + minutes;
-           
-        console.log( ">>>> " + publishedDateString );
+        var publishedDateString = dayIdx.toString() + daySuffix + 
+            ' ' + month + ' ' + date.getFullYear().toString() +
+            ' at ' + hours + ':' + minutes;
             
         return publishedDateString;
       }
