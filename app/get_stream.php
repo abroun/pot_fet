@@ -8,7 +8,7 @@ $data = file_get_contents('https://api.flickr.com/services/feeds/photos_public.g
 $data = str_replace("\\'","'",$data);
 
 // Enable CORS if running in dev mode
-if( strpos(file_get_contents('scripts/config.js'),".constant('ENV', 'development')") !== false) {
+if( strpos(file_get_contents('config.json'),'"ENV": "development"') !== false) {
   header("Access-Control-Allow-Origin: *");
 }
 

@@ -6,7 +6,7 @@
 </div>
 
 <div ng-controller="MainCtrl">
-  <div class="row mv-row" ng-repeat="item in items">
+  <div class="row mv-row" ng-repeat="item in items" ng-cloak>
     <div class="col-xs-4 mv-image-col">
       <a href="#/{{$index}}">
         <img class="mv-item-image" ng-src="{{item.media.m}}" alt="{{item.title}}">

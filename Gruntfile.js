@@ -373,11 +373,27 @@ module.exports = function (grunt) {
       },
       production: {
         options: {
-          dest: '<%= yeoman.dist %>/scripts/config.js',
+          dest: '<%= yeoman.app %>/scripts/config.js',
         },
         constants: {
           ENV: 'production',
           FLICKR_PROXY_URL: 'get_stream.php'
+        }
+      }
+    },
+    
+    // Generates a configuration file that PHP can read
+    json_generator: {
+      development: {
+        dest: '<%= yeoman.app %>/config.json',
+        options: {
+          ENV: "development" 
+        }
+      },
+      production: {
+        dest: '<%= yeoman.dist %>/config.json',
+        options: {
+          ENV: "production" 
         }
       }
     },
@@ -459,6 +475,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'ngconstant:development',
+      'json_generator:development',
       'wiredep',
       'concurrent:server',
       'autoprefixer:server',
@@ -474,7 +491,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
-    'ngconstant:production',
     'wiredep',
     'concurrent:test',
     'autoprefixer',
@@ -487,6 +503,8 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
+    'ngconstant:production',
+    'json_generator:production',
     'autoprefixer',
     'concat',
     'ngAnnotate',
