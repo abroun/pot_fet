@@ -7,7 +7,7 @@
 
 * Setup a proxy to resolve the CORS issue - Done
 
-* Detect if a post index is invalid and if so display a page not found result
+* Detect if a post index is invalid and if so display a page not found result - Done
 
 * Display tags as links - Done
 

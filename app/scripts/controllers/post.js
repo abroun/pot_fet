@@ -13,6 +13,7 @@ angular.module('potFetApp')
     $scope.items = [];
     $scope.item = {};
     $scope.loaded = false;
+    $scope.validPostFound = false;
     
     $scope.tags = 'potato';
     if ($routeParams.tags !== undefined) {
@@ -22,7 +23,10 @@ angular.module('potFetApp')
     $http.get(FLICKR_PROXY_URL, { params: { tags: $scope.tags } }).success(function(data) {
       $scope.items = data.items;
       $scope.postId = $routeParams.postId;
-      $scope.item = $scope.items[ $scope.postId ];
+      if ($scope.postId >= 0 && $scope.postId < $scope.items.length) {
+        $scope.validPostFound = true;
+        $scope.item = $scope.items[ $scope.postId ];
+      }
       $scope.loaded = true;
     });
       

@@ -1,4 +1,14 @@
 <div ng-controller="PostCtrl" ng-cloak ng-show="loaded">
+  <div class="row" ng-hide="validPostFound">
+    <div class="col-xs-10">
+      No post found
+    </div>
+    <div class="col-xs-2">
+      <a class="btn btn-primary pull-right pv-back-button" href="{{buildBackLink()}}">Back</a>
+    </div>
+  </div>
+  
+  <div ng-show="validPostFound">
   <div class="row">
     <div class="col-xs-10">
       <h3 class="pv-item-title"><a href="{{item.link}}">{{formatImageTitle(item.title)}}</a></h3>
@@ -42,5 +52,6 @@
                  <a href="{{buildSearchLink(tag)}}">{{tag}}</a> </span>
        </p>
     </div>
+  </div>
   </div>
 </div>
