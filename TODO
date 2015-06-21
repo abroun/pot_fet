@@ -2,7 +2,8 @@
 * Style the main page - Done
 * Look at freezing title at top of main page whilst scrolling the list of images - Cancelled
 * Style the post detail page - Done
-* Switch from using the array index for posts to an (author, image id) pair
+* Switch from using the array index for posts to an (author, image id) pair - Decided against
+    this as it could get overly complicated with the search tags
 
 * Setup a proxy to resolve the CORS issue - Done
 
@@ -10,8 +11,8 @@
 
 * Display tags as links - Done
 
-* Implement tag search
-* Give images that don't have a title on Flickr a title of 'Unititled'
+* Implement tag search - Done
+* Give images that don't have a title on Flickr a title of 'Unititled' - Done
 
 Nice to have
 ------------

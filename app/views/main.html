@@ -21,14 +21,14 @@
   <div class="row mv-row" ng-repeat="item in items" ng-cloak>
     <div class="col-xs-4 mv-image-col">
       <a href="{{buildPostLink($index)}}">
-        <img class="mv-item-image" ng-src="{{item.media.m}}" alt="{{item.title}}">
+        <img class="mv-item-image" ng-src="{{item.media.m}}" alt="{{formatImageTitle(item.title)}}">
       </a>
     </div>
     <div class="col-xs-8">
       
       <div class="row">
         <div class="col-xs-12">
-          <h3 class="mv-item-title"><a href="{{buildPostLink($index)}}">{{item.title}}</a></h3>
+          <h3 class="mv-item-title"><a href="{{buildPostLink($index)}}">{{formatImageTitle(item.title)}}</a></h3>
         </div>
       </div>
       <div class="mv-small-item-info">

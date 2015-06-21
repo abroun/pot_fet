@@ -22,6 +22,7 @@ angular.module('potFetApp')
     });
     
     $scope.formatPublishedDate = helperMethods.formatPublishedDate;
+    $scope.formatImageTitle = helperMethods.formatImageTitle;
     
     $scope.buildPostLink = function (itemIdx) {
       return '#/' + itemIdx.toString() + '?tags=' + encodeURIComponent($scope.tags);

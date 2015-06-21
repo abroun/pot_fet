@@ -1,7 +1,7 @@
 <div ng-controller="PostCtrl" ng-cloak ng-show="loaded">
   <div class="row">
     <div class="col-xs-10">
-      <h3 class="pv-item-title"><a href="{{item.link}}">{{item.title}}</a></h3>
+      <h3 class="pv-item-title"><a href="{{item.link}}">{{formatImageTitle(item.title)}}</a></h3>
     </div>
     <div class="col-xs-2">
       <a class="btn btn-primary pull-right pv-back-button" href="{{buildBackLink()}}">Back</a>
@@ -16,7 +16,7 @@
   </div>
   <div class="row">
     <div class="col-xs-4 pv-image-col">
-      <img class="pv-item-image" ng-src="{{item.media.m}}" alt="{{item.title}}" class="img-responsive">
+      <img class="pv-item-image" ng-src="{{item.media.m}}" alt="{{formatImageTitle(item.title)}}" class="img-responsive">
     </div>
     <div class="col-xs-8">
        <p>

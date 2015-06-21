@@ -27,6 +27,7 @@ angular.module('potFetApp')
     });
       
     $scope.formatPublishedDate = helperMethods.formatPublishedDate;
+    $scope.formatImageTitle = helperMethods.formatImageTitle;
     
     $scope.buildBackLink = function () {
       return '#/?tags=' + encodeURIComponent($scope.tags);

@@ -44,5 +44,12 @@ describe('Service: helperMethods', function () {
     
     expect(helperMethods.formatPublishedDate(dateString)).toEqual('1st Sep 2014 at 11:17');
   });
-
+  
+  it('should not change a non empty title', function () {    
+    expect(helperMethods.formatImageTitle('A title')).toEqual('A title');
+  });
+  
+  it('should return Untitled for an empty title', function () {
+    expect(helperMethods.formatImageTitle('')).toEqual('Untitled');
+  });
 });

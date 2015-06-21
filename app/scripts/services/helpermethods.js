@@ -32,6 +32,7 @@ angular.module('potFetApp')
       /**
        * Formats a date string for display as the ate when a picture was published
        * @param {string} dateString - A string representation of a Date object to format
+       * @returns {string} A formated date
        */
       formatPublishedDate: function (dateString) {
         
@@ -66,6 +67,22 @@ angular.module('potFetApp')
             ' at ' + hours + ':' + minutes;
             
         return publishedDateString;
-      }
+      },
+      
+      /**
+       * Formats the title of an image. Mainly this ensures that if the title
+       * is empty then a title of 'Untitled' is returned
+       * @param {string} title - The title to be formated
+       * @returns {string} The formated title
+       */
+      formatImageTitle: function (title) {
+        var formatedTitle = title;
+          
+        if (title === '') {
+          formatedTitle = 'Untitled';    
+        }
+        
+        return formatedTitle;
+      },
     };
   });
