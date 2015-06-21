@@ -354,6 +354,33 @@ module.exports = function (grunt) {
         }]
       }
     },
+    
+    // Generate configuration variables for different builds
+    ngconstant: {
+      options: {
+        name: 'config',
+        wrap: '"use strict";\n\n{%= __ngModule %}',
+        space: '  '
+      },
+      development: {
+        options: {
+          dest: '<%= yeoman.app %>/scripts/config.js',
+        },
+        constants: {
+          ENV: 'development',
+          FLICKR_PROXY_URL: 'http://localhost:8888/get_stream.php'
+        }
+      },
+      production: {
+        options: {
+          dest: '<%= yeoman.dist %>/scripts/config.js',
+        },
+        constants: {
+          ENV: 'production',
+          FLICKR_PROXY_URL: 'get_stream.php'
+        }
+      }
+    },
 
     // Replace Google CDN references
     cdnify: {
@@ -376,7 +403,8 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            '*.php'
           ]
         }, {
           expand: true,
@@ -430,6 +458,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'ngconstant:development',
       'wiredep',
       'concurrent:server',
       'autoprefixer:server',
@@ -445,6 +474,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
+    'ngconstant:production',
     'wiredep',
     'concurrent:test',
     'autoprefixer',

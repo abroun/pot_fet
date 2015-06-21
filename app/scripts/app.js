@@ -7,6 +7,7 @@
  * # potFetApp
  *
  * Main module of the application.
+ * NOTE: The 'config' dependency is generated via grunt
  */
 angular
   .module('potFetApp', [
@@ -15,7 +16,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'config'
   ])
   .config(function ($routeProvider) {
     $routeProvider

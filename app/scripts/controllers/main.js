@@ -8,8 +8,8 @@
  * Controller of the potFetApp
  */
 angular.module('potFetApp')
-  .controller('MainCtrl', function ($scope, $http, helperMethods) {
-    $http.get('tmp_data.json').success(function(data) {
+  .controller('MainCtrl', function ($scope, $http, helperMethods, FLICKR_PROXY_URL) {
+    $http.get(FLICKR_PROXY_URL).success(function(data) {
       $scope.items = data.items;
     });
     
